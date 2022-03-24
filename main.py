@@ -9,7 +9,7 @@ def send_email():
     """A function to send the email"""
     current_date = datetime.datetime.now().strftime('%Y-%m-%d')
     news_feed = NewsFeed(interest=row['interest'], from_date=current_date)
-    email = yagmail.SMTP(user="pee49678@gmail.com", password="Fr0g13gs@/")
+    email = yagmail.SMTP(user="pee49678@gmail.com", password="***")
     try:
         email.send(to=row['email'],
                    subject=f"Your {row['interest']} news for today!",
